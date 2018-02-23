@@ -6,6 +6,6 @@ The SoftwareSerial library for Arduino extends serial I/O to as many additional 
 
 I utilize quadrature encoders and rely on a pair of interrupts to detect activity. My library of choice for this is EnableInterrupt, alternately PinChangeInterrupt. Both allow you to clearly define NO interrupts on any of the available ports thereby creating smaller code as well as not disturbing the interrupt vectors for the unused ports. So would it be sufficient if SoftwareSerial had such a facility, but it does not.
 
-To this end I hacked/butchered/chopped SoftwareSerial into three separate libraries: SSerialB, SSerialC and SSerialD (all for the Uno just now) that allow for the creation of software serial ports utilizing pins oh the respective H/W ports only. The interrupt vectors are free for use elsewhere. The only known issue is that if you try to instantiate a port using other pins, there is no compile or run-time error, it simply doesn't work.
+To this end I hacked/butchered/chopped SoftwareSerial into three separate libraries: SSerialB, SSerialC and SSerialD (all for the Uno just now) that allow for the creation of software serial ports utilizing pins on the respective H/W ports only. The interrupt vectors are free for use elsewhere. The only known issue is that if you try to instantiate a port using other pins, there is no compile or run-time error, it simply doesn't work.
 
 Anyhow, here they are. Feel free to use them as you see fit without any obligation to me.
